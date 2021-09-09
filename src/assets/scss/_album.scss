@@ -1,32 +1,27 @@
-#album-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#album-container .card {
+.card {
   background-color: #2e3a46;
   padding: 20px;
   margin: 20px;
-  flex-basis: 200px;
+  width: 200px;
   text-align: center;
   min-height: 350px;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
-#album-container .card img {
-  width: 100%;
-  height: auto;
-}
-
-#album-container .card .title {
+.title {
   color: #fff;
   margin: 15px 0;
 }
-#album-container .card .author,
-#album-container .card .year {
+
+.author,
+.year {
   color: #808080;
   font-size: 21px;
 }
-#album-container .card .year {
+
+.year {
   font-size: 16px;
 }

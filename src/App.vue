@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <Header />
+    <Header @searchEvent="setCurrentGenre" />
     <main>
-      <AlbumContainer>
-        <AlbumCard />
-      </AlbumContainer>
+      <AlbumContainer :currentGenre="currentGenre"/>
     </main>
   </div>
 </template>
@@ -12,16 +10,23 @@
 <script>
 import Header from './components/Header.vue';
 import AlbumContainer from './components/AlbumContainer.vue';
-import AlbumCard from './components/AlbumCard.vue';
-
 
 export default {
   name: 'App',
   components: {
     Header,
     AlbumContainer,
-    AlbumCard,
-  }
+  },
+  data() {
+    return {
+      currentGenre: 'All',
+    }
+  },
+  methods: {
+    setCurrentGenre(currentGenre) {
+      this.currentGenre = currentGenre;
+    },
+  },
 }
 </script>
 
